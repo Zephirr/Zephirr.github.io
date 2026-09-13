@@ -250,50 +250,22 @@ header .header-content .header-content-inner p {
 .service-box p {
   margin-bottom: 0;
 }
-/* Portfolio — equal tiles filling each column */
 .portfolio-box {
   position: relative;
   display: block;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  overflow: hidden;
-  background: #111;
-}
-.portfolio-box::before {
-  content: "";
-  display: block;
-  padding-top: 75%;
-}
-.portfolio-box > img,
-.portfolio-box > img.img-responsive {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none !important;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.portfolio-box img[src*="Yoshimitsu"] {
-  object-position: center 28%;
+  max-width: 650px;
+  margin: 0 auto;
 }
 .portfolio-box .portfolio-box-caption {
-  color: #fff;
+  color: white;
   opacity: 0;
   display: block;
-  background: rgba(27, 110, 177, 0.85);
+  background: rgba(27, 110, 177, 0.9);
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  text-align: center;
   width: 100%;
   height: 100%;
-  text-align: center;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -304,12 +276,11 @@ header .header-content .header-content-inner p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 0 12px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   text-transform: uppercase;
@@ -319,17 +290,19 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-size: 18px;
 }
-.portfolio-box:hover .portfolio-box-caption,
-.portfolio-box:focus .portfolio-box-caption {
+.portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
-.portfolio-box:focus { outline: none; }
-#portfolio .no-gutter > [class*="col-"] {
-  padding: 0;
+.portfolio-box:focus {
+  outline: none;
 }
 @media (min-width: 768px) {
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category { font-size: 16px; }
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name { font-size: 22px; }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
 }
 
 .call-to-action h2 {
