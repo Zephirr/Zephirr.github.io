@@ -93,6 +93,10 @@
   }
   resize();
   window.addEventListener('resize', resize, { passive:true });
+  if (window.ResizeObserver && parent) {
+    new ResizeObserver(() => resize()).observe(parent);
+  }
+  requestAnimationFrame(resize);
 
   function onMove(e){
     const rect = canvas.getBoundingClientRect();
